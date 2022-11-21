@@ -14,7 +14,7 @@ $hasil = mysqli_query($conn, $sql);
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Detail-Tsania</title>
+  <title>Edit-TSANIA RIFQA ANNISA-1202204307</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <style>
     <?php include '../asset/style/style.css'; ?>
@@ -45,29 +45,27 @@ $hasil = mysqli_query($conn, $sql);
                 <p class='tambahb'>Detail Mobil " . $getDetail["namamobil"] . "</p>
                 <div class='d-flex justify-content-center align-items-start gap-5 mt-5'>
                   <img src='../asset/images/" . $getDetail["fotomobil"] . "' alt='fotomobil'>
-                  <form action='' enctype='multipart/form-data'>
-                    <label for='nama'>Nama Mobil</label>
-                    <input type='text' id='namamobil' name='namamobil' value='" . $getDetail["namamobil"] . "' readonly>
+                  <form action='../config/edit.php?id=" . $getDetail["idmobil"] . "' method='POST' enctype='multipart/form-data'>
+                    <label for='namamobil'>Nama Mobil</label>
+                    <input type='text' id='namamobil' name='namamobil' value='" . $getDetail["namamobil"] . "' >
                     <label for='pemilikmobil'>Nama Pemilik</label>
-                    <input type='text' id='pemilikmobil' name='pemilikmobil' value='" . $getDetail["pemilikmobil"] . "' readonly>
+                    <input type='text' id='pemilikmobil' name='pemilikmobil' value='" . $getDetail["pemilikmobil"] . "' >
                     <label for='merkmobil'>Merk</label>
-                    <input type='text' id='merkmobil' name='merkmobil' value='" . $getDetail["merkmobil"] . "' readonly>
+                    <input type='text' id='merkmobil' name='merkmobil' value='" . $getDetail["merkmobil"] . "' >
                     <label for='tanggalbeli'>Tanggal Beli</label>
-                    <input type='date' id='tanggalbeli' name='tanggalbeli' value='" . $getDetail["tanggalbeli"] . "' readonly>
+                    <input type='date' id='tanggalbeli' name='tanggalbeli' value='" . $getDetail["tanggalbeli"] . "' >
                     <label for='desk'>Deskripsi</label>
-                    <textarea id='desk' name='desk' style='height:200px; width: 600px; border-radius: 8px;' readonly> " . $getDetail["deskripsi"] . " </textarea>
+                    <textarea id='desk' name='desk' style='height:200px; width: 600px; border-radius: 8px;' > " . $getDetail["desk"] . " </textarea>
                     <label for='inputGroupFile01'>Foto</label>
-                    <div class='input-group mb-3'>
-                      <input type='text' class='form-control' id='inputGroupFile01' value='" . $getDetail["foto_mobil"] . "' readonly>
-                    </div>
+                    <input type='file' class='form-control' id='inputGroupFile01' value='" . $getDetail["fotomobil"] . "' name='fotomobil' style='height: 40px;'>
                     <label for='status'>Status Pembayaran</label>
                     <span class='d-flex'>
                       <input type='radio' name='status' id='lunas' value='Lunas' " . (($getDetail["status"] == 'Lunas') ? 'checked="checked"' : "") . " style='width: 15px; height: 15px; margin-right:10px;'>
                       <label for='lunas' style='margin-top: 15px; margin-right:10px;'>Lunas</label>
-                      <input type='radio' name='status' id='belum_lunas' value='Belum Lunas' " . (($getDetail["status"] == 'Belum Lunas') ? 'checked="checked"' : "") . " style='width: 15px; height: 15px; margin-right:10px;'>
-                      <label for='belum' style='margin-top: 15px;'>Belum Lunas</label>
+                      <input type='radio' name='status' id='belum' value='Belum Lunas' " . (($getDetail["status"] == 'Belum Lunas') ? 'checked="checked"' : "") . " style='width: 15px; height: 15px; margin-right:10px;'>
+                      <label for='belum_lunas' style='margin-top: 15px;'>Belum Lunas</label>
                     </span>
-                    <a href='Edit-Aprilita.php?id=" . $getDetail["id_mobil"] . "' class='btn btn-primary' style='margin-top: 40px;'>Edit</a>
+                    <button type='submit' class='btn btn-primary' style='margin-top: 40px;'>Selesai</button>
                   </form>
                 </div>
             ";

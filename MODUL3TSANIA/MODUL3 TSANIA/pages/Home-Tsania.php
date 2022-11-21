@@ -35,9 +35,9 @@ function onClick($hasil)
         <div class="navbar-nav gap-3">
           <a class="nav-link" style="color: white;" href="#home">Home</a>
           <a class="nav-link" href="<?php if (mysqli_num_rows($hasil) > 0) {
-                                      echo "./pages/ListCar-Aprilita.php";
+                                      echo "./pages/ListCar-Tsania.php";
                                     } else {
-                                      echo "./pages/Add-Aprilita.php";
+                                      echo "./pages/Add-Tsania.php";
                                     } ?>">My Car
           </a>
           <!-- SHOW LOGO -->
@@ -60,7 +60,7 @@ function onClick($hasil)
           <a href="<?php echo "./pages/Add-Tsania.php";?>" class="btn btn-primary">My Car</a>
           <div class="d-flex align-items-center gap-5 mt-5">
             <img src="<?php echo "asset/images/logo-ead.png" ?>" alt="logoead" style="width:100px;">
-            <p style="margin-top: 20px; font-size:14px;">Tsania_NIM</p>
+            <p style="margin-top: 20px; font-size:14px;">Tsania_1202204307</p>
           </div>
         </div>
         <img src="<?php echo "asset/images/bmw.png" ?>" alt="mobil">
