@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Add New Item</title>
+  <title>AddItem</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <style>
     <?php include '../asset/style/style.css'; ?>
@@ -34,8 +34,8 @@
         <label for="nama_mobil">Nama Mobil</label>
         <input type="text" id="nama_mobil" name="nama_mobil" placeholder="Nama Mobil Anda">
         <label for="pemilik_mobil">Nama Lengkap</label>
-        <input type="text" id="pemilik_mobil" name="pemilik_mobil" placeholder="Nama Lengkap Anda">
-        <label for="merk_mobil">Merk Mobil</label>
+        <input type="text" id="pemilik_mobil" name="pemilik_mobil" placeholder="Nama Anda">
+        <label for="merk_mobil">Merk</label>
         <input type="text" id="merk_mobil" name="merk_mobil" placeholder="Merk Mobil Anda">
         <label for="tanggal_beli">Tanggal Beli</label>
         <input type="date" id="tanggal_beli" name="tanggal_beli">
@@ -43,7 +43,7 @@
         <textarea id="deskripsi" name="deskripsi" placeholder="Deskripsi Mobil Anda" style="height:200px; width: 1000px; border-radius: 8px;"></textarea>
         <label for="foto_mobil">Foto</label>
         <input type="file" class="form-control" id="foto_mobil" name="foto_mobil" style="height: 40px;">
-        <label for="status_pembayaran">Payment Status</label>
+        <label for="status_pembayaran">Status Pembayaran</label>
         <span class="d-flex">
           <input type="radio" name="status_pembayaran" id="lunas" value="Lunas" style="width: 15px; height: 15px; margin-right:10px;">
           <label for="lunas" style="margin-top: 15px; margin-right:10px;">Lunas</label>

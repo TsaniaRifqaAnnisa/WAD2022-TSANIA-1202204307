@@ -1,9 +1,6 @@
-    <?php 
-        $dbhost = "localhost";
-        $dbuser = "root";
-        $dbname = "wad_modul4_tsania";
-        $dbpass = "";
-        $dbport = 3315;
+<?php
+$connector = new mysqli("127.0.0.1". ":" . "3315", "root", "", "wad_modul4_tsania");
 
-        $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname, $dbport);
-    ?>
+if (!$connector) {
+  die("Koneksi Error: " . $connector->connector_error);
+}

@@ -18,7 +18,7 @@
 <body>
     <div class="row g-0">
         <div class="col-md-6 d-none d-md-block">
-            <img src="../asset/images/Car_Login.jpeg" alt="Sample photo" class="img-fluid"
+            <img src="../asset/images/mobil_login.jpg" alt="Sample photo" class="img-fluid"
                 style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem; height: 100vh; width: 100vh; object-fit: cover" />
         </div>
         <div class="col-md-6">
@@ -34,7 +34,7 @@
                         </div>
                         <div class="col-md-12 mb-2">
                             <div class="form-outline">
-                                <label class="form-label">Kata Sandi</label>
+                                <label class="form-label">Password</label>
                                 <input type="password" name="password" class="form-control" required />
                             </div>
                         </div>
@@ -50,7 +50,7 @@
                     </div>
                 </form>
                 <div class="mt-2">
-                    <p>Anda Belum Punya Akun? <a href="../pages/Register-Tsania.php">Daftar</a></p>
+                    <p>Doesn't have account? <a href="../pages/register-tsania.php">Register Here</a></p>
                 </div>
             </div>
         </div>

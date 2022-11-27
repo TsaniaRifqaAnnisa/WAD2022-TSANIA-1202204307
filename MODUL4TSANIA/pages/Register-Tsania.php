@@ -19,7 +19,7 @@
 
     <div class="row g-0">
         <div class="col-md-6 d-none d-md-block">
-            <img src="../asset/images/Car_Login.jpeg" alt="Sample photo" class="img-fluid"
+            <img src="../asset/images/mobil_login.jpg" alt="" class="img-fluid"
                 style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem; height: 100vh; width: 100vh; object-fit: cover" />
         </div>
         <div class="col-md-6">
@@ -35,25 +35,25 @@
                         </div>
                         <div class="col-md-12 mb-2">
                             <div class="form-outline">
-                                <label class="form-label">Nama</label>
+                                <label class="form-label">Name</label>
                                 <input type="text" name="nama" class="form-control" />
                             </div>
                         </div>
                         <div class="col-md-12 mb-2">
                             <div class="form-outline">
-                                <label class="form-label">Nomor Handphone</label>
+                                <label class="form-label">Phone Number</label>
                                 <input type="phone" name="no_hp" class="form-control" required />
                             </div>
                         </div>
                         <div class="col-md-12 mb-2">
                             <div class="form-outline">
-                                <label class="form-label">Kata Sandi</label>
+                                <label class="form-label">Password</label>
                                 <input type="password" name="password" class="form-control" required />
                             </div>
                         </div>
                         <div class="col-md-12 mb-2">
                             <div class="form-outline">
-                                <label class="form-label">Konfirmasi Kata Sandi</label>
+                                <label class="form-label">Confirm Password</label>
                                 <input type="password" name="repassword" class="form-control"
                                     required />
                             </div>
@@ -64,7 +64,7 @@
                     </div>
                 </form>
                 <div class="mt-2">
-                    <p>Anda Sudah Punya Akun? <a href="Login-Tsania.php">Login</a></p>
+                    <p>Have an Account? <a href="login-tsania.php">Login  Here</a></p>
                 </div>
             </div>
         </div>
@@ -73,5 +73,3 @@
 <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
 </script>
-
-</html>

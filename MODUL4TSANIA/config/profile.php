@@ -10,8 +10,8 @@
     setcookie("bg-nav", $_POST["bg-nav"], time() + 3600, "/");
 
     if($password == $repassword){
-        $mysql = "UPDATE wad_modul4 SET nama = '$nama', `password` = '$password', no_hp = '$no_hp' WHERE email = '$email'";
-        if (mysqli_query($conn, $mysql)) {
+        $mysql = "UPDATE user_tsania SET nama = '$nama', `password` = '$password', no_hp = '$no_hp' WHERE email = '$email'";
+        if (mysqli_query($connector, $mysql)) {
             header("location: ../pages/Profil-Tsania.php");
         } else {
             echo "Gagal";
@@ -19,4 +19,3 @@
     } else {
         echo "Password Tidak Cocok";
     }
-?>

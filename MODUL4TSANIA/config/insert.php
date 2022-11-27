@@ -1,26 +1,23 @@
-    <?php
-    require 'connector.php';
+<?php
+require './connector.php';
 
-    $namamobil = $_POST['car'];
-    $pemilik = $_POST['own'];
-    $merk = $_POST['merk'];
-    $tanggalbeli = $_POST['date'];
-    $desc = $_POST['desc'];
-    $status = $_POST['status'];
+$nama_mobil = $_POST['nama_mobil'];
+$pemilik_mobil = $_POST['pemilik_mobil'];
+$merk_mobil = $_POST['merk_mobil'];
+$tanggal_beli = $_POST['tanggal_beli'];
+$deskripsi = $_POST['deskripsi'];
+$status_pembayaran = $_POST['status_pembayaran'];
+$foto_mobil = $_FILES['foto_mobil']['name'];
 
-    $gambar = $_FILES['image']['name'];
+$target = "../asset/images/";
 
-    $target = "../upload/images/";
-
-    if (move_uploaded_file($_FILES['image']['tmp_name'], $target . $gambar)) {
-        $mysql = "INSERT INTO showroom_tsania_table (nama_mobil, pemilik_mobil, merk_mobil, tanggal_beli, deskripsi, foto_mobil, status_pembayaran) VALUES ('$namamobil', '$pemilik', '$merk', '$tanggalbeli', '$desc', '$gambar', '$status')";
-        if (mysqli_query($conn, $mysql)) {
-            header("location: ../pages/ListCar-Tsania.php?message=success");
-        } else {
-            echo "Gagal";
-        }
-    } else {
-    echo "Gagal";
-    }
-
-    ?>
+if (move_uploaded_file($_FILES['foto_mobil']['tmp_name'], $target . $foto_mobil)) {
+  $sql = "INSERT INTO showroom_tsania_table (nama_mobil, pemilik_mobil, merk_mobil, tanggal_beli, deskripsi, foto_mobil, status_pembayaran) VALUES ('$nama_mobil', '$pemilik_mobil', '$merk_mobil', '$tanggal_beli', '$deskripsi', '$foto_mobil', '$status_pembayaran')";
+  if (mysqli_query($connector, $sql)) {
+    header("location: ../pages/list-tsania.php");
+  } else {
+    echo "Error";
+  }
+} else {
+  echo "Error";
+}

@@ -29,7 +29,7 @@
                     </li>
                     <?php if(isset($_SESSION['email']) || isset($_COOKIE['email'])):?>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="pages/ListCar-Tsania.php">My Car</a>
+                            <a class="nav-link" aria-current="page" href="pages/list-tsania.php">My Car</a>
                         </li>
                     <?php endif;?>
                 </ul>
@@ -41,21 +41,21 @@
                                 <?php 
                                 $email = isset($_SESSION['email'])? $_SESSION['email'] : $_COOKIE['email'];
 
-                                $mysql = "SELECT * FROM wad_modul4 WHERE email = '$email'";
-                                $rslt = mysqli_query($conn, $mysql);
+                                $mysql = "SELECT * FROM user_tsania WHERE email = '$email'";
+                                $rslt = mysqli_query($connector, $mysql);
                                 $row = mysqli_fetch_assoc($rslt);
 
                                 echo $row["nama"];
                             ?>
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="pages/Profil-Tsania.php">Profile</a></li>
+                                <li><a class="dropdown-item" href="pages/profil-tsania.php">Profile</a></li>
                                 <li><a class="dropdown-item" href="./config/logout.php">Logout</a></li>
                             </ul>
                         </div>
-                        <a class="btn btn-light" style="margin-right: 10px;" href="pages/Add-Tsania.php">Add Car</a>
+                        <a class="btn btn-light" style="margin-right: 10px;" href="pages/add-tsania.php">Add Car</a>
                     <?php else:?>
-                        <a class="btn btn-light" href="pages/Login-Tsania.php">Login</a>
+                        <a class="btn btn-light" href="pages/login-tsania.php">Login</a>
                     <?php endif;?>
                 </form>
             </div>
@@ -66,23 +66,23 @@
             <div class="row justify-content-md-center row align-items-center" style="height: 85vh;">
                 <div class="col-md-5">
                     <p>
-                        <h1>Selamat Datang Di Show Room Tsania</h1>
-                        Kami memiliki menyediakan berbagai jenis mobil dengan harga terjangkau.
+                        <h1>Welcome to Tsania Show Room</h1>
+                        Kami menyediakan berbagai macam mobil dengan harga terjangkau.
                     </p>
                     <?php if(isset($_SESSION['email']) || isset($_COOKIE['email'])):?>
-                        <a class="btn btn-<?php echo isset($_COOKIE['bg-nav'])? $_COOKIE['bg-nav'] : 'primary';?>" href="pages/ListCar-Tsania.php" role="button">My Car</a>
+                        <a class="btn btn-<?php echo isset($_COOKIE['bg-nav'])? $_COOKIE['bg-nav'] : 'primary';?>" href="pages/list-tsania.php" role="button">My Car</a>
                     <?php endif;?>
                     <div class="row mt-4">
                         <div class="col-md-4">
                             <img src="./asset/images/logo-ead.png" class="card-img-top">
                         </div>
                         <div class="col-md-4">
-                            Tsania Rifqa Annisa - 1202204307
+                            Tsania_1202204307
                         </div>
                     </div>
                 </div>
                 <div class="col-md-5">
-                    <img src="./asset/images/Car_Login.jpeg" class="card-img-top rounded">
+                    <img src="./asset/images/Car.png" class="card-img-top rounded">
                 </div>
             </div>
         </div>

@@ -4,8 +4,8 @@
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $mysql = "SELECT * FROM wad_modul4_tsania WHERE email = '$email'";
-    $result = mysqli_query($conn, $mysql);
+    $mysql = "SELECT * FROM user_tsania WHERE email = '$email'";
+    $result = mysqli_query($connector, $mysql);
     $row = mysqli_fetch_assoc($result);
 
     if($row){
@@ -26,4 +26,3 @@
     } else {
         echo "Email Belum Terdaftar, Silahkan Daftar Terlebih Dahulu";
     }
-?>

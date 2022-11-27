@@ -8,8 +8,8 @@
     $repassword = $_POST['repassword'];
 
     if($password == $repassword){
-        $mysql = "INSERT INTO wad_modul4_tsania (nama, email, `password`, no_hp) VALUES ('$nama', '$email', '$password', '$no_hp')";
-        if (mysqli_query($conn, $mysql)) {
+        $mysql = "INSERT INTO user_tsania (nama, email, `password`, no_hp) VALUES ('$nama', '$email', '$password', '$no_hp')";
+        if (mysqli_query($connector, $mysql)) {
             header("location: ../pages/Login-Tsania.php");
         } else {
             echo "Gagal";
@@ -17,4 +17,3 @@
     } else {
         echo "Password Tidak Cocok";
     }
-?>

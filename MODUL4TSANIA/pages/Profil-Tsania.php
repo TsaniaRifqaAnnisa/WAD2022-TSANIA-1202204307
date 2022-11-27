@@ -32,7 +32,7 @@
                     </li>
                     <?php if(isset($_SESSION['email']) || isset($_COOKIE['email'])):?>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="ListCar-Tsania.php">My Car</a>
+                        <a class="nav-link" aria-current="page" href="list-tsania.php">My Car</a>
                     </li>
                     <?php endif;?>
                 </ul>
@@ -44,8 +44,8 @@
                             <?php 
                                 $email = isset($_SESSION['email'])? $_SESSION['email'] : $_COOKIE['email'];
 
-                                $mysql = "SELECT * FROM wad_modul4 WHERE email = '$email'";
-                                $rslt = mysqli_query($conn, $mysql);
+                                $mysql = "SELECT * FROM user_tsania WHERE email = '$email'";
+                                $rslt = mysqli_query($connector, $mysql);
                                 $row = mysqli_fetch_assoc($rslt);
 
                                 echo $row["nama"];
@@ -82,14 +82,14 @@
                                     </div>
                                     <div class="col-md-12 mb-4">
                                         <div class="form-outline">
-                                            <label class="form-label">Nama</label>
+                                            <label class="form-label">Name</label>
                                             <input type="text" name="nama" value="<?php echo $row["nama"];?>"
                                                 class="form-control" />
                                         </div>
                                     </div>
                                     <div class="col-md-12 mb-4">
                                         <div class="form-outline">
-                                            <label class="form-label">Nomor Handphone</label>
+                                            <label class="form-label">Phone Number (+62)</label>
                                             <input type="phone" name="no_hp" value="<?php echo $row["no_hp"];?>"
                                                 class="form-control" required />
                                         </div>
@@ -97,27 +97,27 @@
                                     <hr>
                                     <div class="col-md-12 mb-4">
                                         <div class="form-outline">
-                                            <label class="form-label">Kata Sandi</label>
+                                            <label class="form-label">Password</label>
                                             <input type="password" name="password" class="form-control"
                                                 required />
                                         </div>
                                     </div>
                                     <div class="col-md-12 mb-4">
                                         <div class="form-outline">
-                                            <label class="form-label">Konfirmasi Kata Sandi</label>
+                                            <label class="form-label">Confirm Password</label>
                                             <input type="password" name="repassword"
                                                 class="form-control" required />
                                         </div>
                                     </div>
                                     <div class="col-md-12 mb-4">
                                         <div class="form-outline">
-                                            <label class="form-label">Warna Navbar</label>
+                                            <label class="form-label">Navbar Colour</label>
                                             <select class="form-select" name="bg-nav">
-                                                <option value="primary">Biru</option>
-                                                <option value="success">Hijau</option>
-                                                <option value="warning">Kuning</option>
+                                                <option value="primary">Blue</option>
+                                                <option value="success">Green</option>
+                                                <option value="warning">Yellow</option>
                                                 <option value="secondary">Grey</option>
-                                                <option value="danger">Merah</option>
+                                                <option value="danger">Red</option>
                                             </select>
                                         </div>
                                     </div>
@@ -136,5 +136,3 @@
 <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
 </script>
-
-</html>
