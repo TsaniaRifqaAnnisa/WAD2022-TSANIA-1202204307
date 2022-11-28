@@ -2,7 +2,7 @@
     require 'connector.php';
 
     $email = $_POST['email'];
-    $name = $_POST['nama'];
+    $nama = $_POST['nama'];
     $no_hp = $_POST['no_hp'];
     $password = $_POST['password'];
     $repassword = $_POST['repassword'];
