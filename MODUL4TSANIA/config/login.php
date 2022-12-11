@@ -15,9 +15,9 @@
                 }
 
                 if(!isset($_SESSION))
-                    session_start()
+                    session_start();
                 
-                $_SESSION['email'] = $row["email"];
+                $_SESSION['email'] = $row ["email"];
 
             header("location: ../index.php");
             } else {
